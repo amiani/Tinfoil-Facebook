@@ -81,7 +81,7 @@ public abstract class BaseFacebookWebViewActivity extends Activity implements
     protected final static int RESULT_CODE_FILE_UPLOAD_LOLLIPOP = 2001;
     protected static final String KEY_SAVE_STATE_TIME = "_instance_save_state_time";
     private static final int ID_CONTEXT_MENU_SAVE_IMAGE = 2981279;
-    protected final static String INIT_URL_MOBILE = "https://m.facebook.com";
+    protected final static String INIT_URL_MOBILE = "https://m.facebook.com/messages";
     protected final static String INIT_URL_DESKTOP = "https://www.facebook.com";
     protected final static String INIT_URL_FACEBOOK_ZERO = "https://0.facebook.com";
     protected final static String INIT_URL_FACEBOOK_ONION = "https://facebookcorewwwi.onion";
@@ -344,6 +344,7 @@ public abstract class BaseFacebookWebViewActivity extends Activity implements
      * @param url {@link String}
      */
     protected void loadNewPage(String url) {
+        Logger.d("1234", "laodnewpage");
         if (mWebView != null) {
             mWebView.loadUrl(url);
         }

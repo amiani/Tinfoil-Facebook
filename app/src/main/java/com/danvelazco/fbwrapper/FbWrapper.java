@@ -156,7 +156,7 @@ public class FbWrapper extends BaseFacebookWebViewActivity {
         findViewById(R.id.menu_drawer_right).setOnClickListener(buttonsListener);
         findViewById(R.id.menu_item_jump_to_top).setOnClickListener(buttonsListener);
         findViewById(R.id.menu_item_refresh).setOnClickListener(buttonsListener);
-        findViewById(R.id.menu_item_newsfeed).setOnClickListener(buttonsListener);
+        //findViewById(R.id.menu_item_newsfeed).setOnClickListener(buttonsListener);
         findViewById(R.id.menu_items_notifications).setOnClickListener(buttonsListener);
         findViewById(R.id.menu_item_messages).setOnClickListener(buttonsListener);
         findViewById(R.id.menu_share_this).setOnClickListener(buttonsListener);
@@ -363,9 +363,9 @@ public class FbWrapper extends BaseFacebookWebViewActivity {
                 case R.id.menu_item_refresh:
                     refreshCurrentPage();
                     break;
-                case R.id.menu_item_newsfeed:
+                /*case R.id.menu_item_newsfeed:
                     loadNewPage(mDomainToUse);
-                    break;
+                    break;*/
                 case R.id.menu_items_notifications:
                     loadNewPage(mDomainToUse + URL_PAGE_NOTIFICATIONS);
                     break;
@@ -428,5 +428,4 @@ public class FbWrapper extends BaseFacebookWebViewActivity {
         }
         return super.onKeyDown(keyCode, event);
     }
-
 }
