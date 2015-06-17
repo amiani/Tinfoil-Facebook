@@ -344,7 +344,6 @@ public abstract class BaseFacebookWebViewActivity extends Activity implements
      * @param url {@link String}
      */
     protected void loadNewPage(String url) {
-        Logger.d("1234", "laodnewpage");
         if (mWebView != null) {
             mWebView.loadUrl(url);
         }
@@ -531,6 +530,11 @@ public abstract class BaseFacebookWebViewActivity extends Activity implements
     @Override
     public void onProgressChanged(WebView view, int progress) {
         Logger.d(LOG_TAG, "onProgressChanged(), progress: " + progress);
+        String url = view.getUrl();
+        if (url.contains("home.php")) {
+            view.loadUrl(INIT_URL_MOBILE);
+            return;
+        }
 
         // Posts current progress to the ProgressBar
         mProgressBar.setProgress(progress);

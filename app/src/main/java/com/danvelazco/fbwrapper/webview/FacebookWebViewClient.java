@@ -218,6 +218,5 @@ public class FacebookWebViewClient extends WebViewClient {
          * @param url {@link String} The url to be loaded.
          */
         void openExternalSite(String url);
-
     }
 }
